@@ -1,0 +1,1219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body{ 
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------------------- */
+/* ------------------- H e a d e r -------------------- */
+/* ---------------------------------------------------- */
+
+.header{
+    position: relative;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    max-height: 380px; 
+    filter: brightness(30%);
+}
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    background-color: transparent; 
+    transition: background-color 0.3s;
+    height: 115px;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: #111821;
+    height: 115px;
+}
+
+.navbar a {
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 3px; 
+    font-weight: bold;
+    position: relative; 
+}
+
+.navbar .navbar-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.navbar .op-home {
+    position: absolute;
+    right: 20px; 
+}
+
+.logo {
+    width: auto; 
+    height: 50px;
+    margin: 0 10px;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; 
+    background-color: white; 
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar a.nav-logo::after {
+    display: none;
+}
+
+.tema {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    font-size: 32px;
+    font-weight: bold;
+    z-index: 100;
+    letter-spacing: 8px;
+}
+
+/* ---------------------------------------------------- */
+/* --------------------- M a i n ---------------------- */
+/* ---------------------------------------------------- */
+
+/* -------------------- Bienvenida -------------------- */
+
+.texto {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 18px; 
+    text-align: justify; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding: 20px; 
+}
+
+.text {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 20px;
+    text-align: center; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding: 20px; 
+    padding-bottom: 40px;
+}
+
+/* ---------------- Catálogos de Viajes --------------- */
+
+.title-container {
+    display: flex; 
+    align-items: center; 
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif; 
+    color: #1A2432;
+    font-size: 22px;
+    letter-spacing: 3px; 
+    margin: 0;
+}
+
+.decorative-box {
+    width: 10px; 
+    height: 18px; 
+    background-color: #1A2432; 
+    margin-right: 15px;
+}
+
+.carrusel-catalogos {
+    position: relative;
+    padding-top: 6px;
+    max-width: 1175px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.img-catalogos {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.img-catalogos img {
+    width: 100%; 
+    display: block;
+    transition: filter 0.3s ease; 
+}
+
+.img-catalogos img:hover {
+    opacity: 0.9; 
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bola {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #BBB;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.bola.activa {
+    background-color: #717171;
+}
+
+.botones-catalogo {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-catalogo {
+    display: inline-block;
+    padding: 20px 80px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #4e6a76, #314A65); 
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 0 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-catalogo:hover {
+    background: linear-gradient(135deg, #223346, #1a2c38); 
+    transform: scale(1.05);  
+    animation: pulsar 0.8s ease-in-out infinite; 
+}
+
+.btn-catalogo:active {
+    background: linear-gradient(135deg, #1a2c38, #314A65);
+    transform: scale(0.98); 
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* ---------- Servicio 1: Paquetes Turísticos --------- */
+
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    max-width: 1200px;
+    padding: 0 20px; 
+    margin: 0 auto; 
+    height: 820px;
+}
+
+.carrusel {
+    width: 100%; 
+    max-width: 1000px;
+    overflow: hidden; 
+    margin: 0 auto;
+}
+
+.imagen {
+    display: flex;
+    transition: transform 0.5s ease; 
+    gap: 18px;
+    padding: 0px 20px;
+}
+
+.image {
+    min-width: 32.677%;
+    height: 780px; 
+}
+
+.img {
+    min-width: 300px;
+    height: 300px;
+}
+
+.image img {
+    width: 50%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: opacity 0.3s ease; 
+}
+
+.image:hover img {
+    opacity: 0.9; 
+}
+
+.prev{
+    width: 70px;
+    height: 70px; 
+    background-image: url('vista/IMG/home/IzquierdaAzul.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    border: none; 
+    background-color: transparent; 
+    margin-right: 20px;
+}
+
+.next{
+    width: 50px;
+    height: 53px; 
+    background-image: url('./vista/IMG/home/DerechaAzul.png');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    border: none;
+    background-color: transparent; 
+    margin-left: 20px;
+}
+
+.prev, .next {
+    position: relative;
+    line-height: 0; 
+    transform: translateY(-120px); 
+}
+
+.descripcion {
+    text-align: center; 
+    padding-top: 30px; 
+    margin: 5px 0; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px; 
+    color: black;
+    text-align: justify;
+}
+
+.duracion {
+    text-align: center; 
+    padding-top: 17px; 
+    margin-top: 5px;
+    margin-bottom: -3px; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px; 
+    font-weight: bold;
+    text-align: left;
+}
+
+.precio {
+    text-align: center; 
+    margin: 0px 0; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 23px; 
+    font-weight: bold;
+    text-align: left;
+}
+
+.icon-link {
+    text-decoration: none; 
+}
+
+.icono-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.icon-container {
+    display: flex; 
+    align-items: center; 
+    margin-left: 0;
+    margin-right: 10px; 
+    cursor: pointer;
+}
+
+.icon-container i {
+    font-size: 40px; 
+    color: #8A8A8A; 
+    margin-right: -14px; 
+    transform: translateY(-9px); 
+}
+
+.icon-container:hover i {
+    color: #293E55; 
+    transition: color 0.3s;
+}
+
+.linea-divisoria {
+    height: 2px; 
+    background-color: #000; 
+    margin-top: 20px; 
+    margin-bottom: 5px;
+}
+
+.destinos {
+    text-align: center; 
+    padding-top: 10px; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 15px; 
+    color: black; 
+    text-align: justify; 
+}
+
+/* -------------- Servicio 2: Excursiones ------------- */
+
+.excursiones {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    padding: 3%; 
+    cursor: pointer; 
+}
+
+.excursiones * {
+    box-sizing: inherit; 
+    border: none; 
+    outline: none; 
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around; 
+    background-color: #3E5C7E; 
+    padding: 10px 0; 
+    border-radius: 8px; 
+}
+
+.menu p {
+    margin: 0; 
+    color: #FFF; 
+    font-weight: bold;
+    cursor: pointer; 
+    position: relative; 
+    padding: 10px 20px; 
+    transition: color 0.3s;
+}
+
+.menu p:hover {
+    color: #B1C4D9; 
+}
+
+.menu p::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #DDE6EF;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu p:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+
+.content {
+    margin-top: 4rem;
+}
+
+[data-content] {
+    display: none;
+}
+
+.active[data-content] {
+    display: block;
+}
+
+.textoC {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px; 
+    text-align: justify; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding-top: 30px; 
+    margin-left: 23px;
+}
+
+.textD {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 18px;
+    text-align: center; 
+    margin: 0 auto; 
+    max-width: 1200px; 
+    padding: 20px; 
+    padding-bottom: 40px;
+}
+
+.textoC b {
+    color: #293E55;
+}
+
+.excursiones div {
+    border: none;
+    outline: none;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.card {
+    width: 380px;
+    height: 230px; 
+    perspective: 1000px; 
+    border: none !important; 
+    box-shadow: none !important; 
+    position: relative; 
+    margin-bottom: 10px;
+}
+
+.card-text {
+    width: 380px; 
+    height: 80px; 
+    perspective: 1000px; 
+    border: none !important; 
+    box-shadow: none !important;
+    position: relative; 
+    margin-bottom: 10px; 
+}
+
+.card-textB {
+    width: 380px; 
+    height: 80px; 
+    perspective: 1000px; 
+    border: none !important;
+    box-shadow: none !important; 
+    position: relative; 
+    margin-left: -405px;
+    margin-top: 260px;
+}
+
+.card-textC {
+    width: 380px; 
+    height: 80px; 
+    perspective: 1000px; 
+    border: none !important;
+    box-shadow: none !important;
+    position: relative; 
+    margin-left: -805px;
+    margin-top: 260px;
+}
+
+.card-textD {
+    width: 380px;
+    height: 80px; 
+    perspective: 1000px; 
+    border: none !important; 
+    box-shadow: none !important; 
+    position: relative;
+    margin-left: 5px;
+    margin-top: 260px;
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s; 
+    transform-style: preserve-3d; 
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); 
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+    backface-visibility: hidden;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    overflow: hidden; 
+}
+
+.card-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.card-back {
+    position: relative; 
+    background: linear-gradient(to bottom right, #45678D, #819FC1);
+    color: #FFF;
+    transform: rotateY(180deg);
+    padding: 15px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%; 
+}
+
+.card-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+
+.card-back > * {
+    position: relative; 
+    z-index: 2; 
+}
+
+.back-description {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 14px; 
+    text-align: justify; 
+    margin-top: 12px; 
+    margin-bottom: 25px; 
+    padding-left: 18px; 
+    padding-right: 18px; 
+}
+
+.more-info {
+    color: #FFF;
+    text-decoration: underline; 
+    cursor: pointer; 
+    margin-bottom: 25px;
+    transition: color 0.3s, transform 0.3s; 
+}
+
+.more-info:hover {
+    color: #B1C4D9;
+    transform: scale(1.05);
+}
+
+.excursiones .duracion {
+    text-align: center; 
+    padding-top: 0px; 
+    margin-top: 0px;
+    margin-bottom: -3px; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px; 
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px; 
+}
+
+.excursiones .precio {
+    text-align: center; 
+    margin: 0px 0; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 23px; 
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px; 
+}
+
+.icono-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.icon-container {
+    display: flex; 
+    align-items: center; 
+    margin-left: 0;
+    margin-right: 16px; 
+    cursor: pointer;
+}
+
+.icon-container i {
+    font-size: 40px; 
+    color: #8A8A8A; 
+    margin-right: -14px; 
+    transform: translateY(-9px); 
+}
+
+.icon-container:hover i {
+    color: #293E55; 
+    transition: color 0.3s;
+}
+
+/* --------------- Servicio 3: Hospedaje -------------- */
+
+.galeria { 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+    flex-direction: column; 
+}
+
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    max-width: 1100px;
+    margin: 0 auto; 
+}
+
+.galeria-item {
+    text-align: center; 
+    margin: 15px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    flex: 1 1 30%;
+    max-width: 370px;
+}
+
+.galeria-item img {
+    width: 330px; 
+    height: 220px; 
+    border-radius: 20px;
+    object-fit: cover; 
+    transition: transform 0.3s, opacity 0.3s; 
+    opacity: 0.8; 
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05); 
+    opacity: 1; 
+}
+
+.reserva-btn {
+    background: linear-gradient(45deg, #4C78A4, #537AA7);
+    font-family: 'Poppins', sans-serif; 
+    color: white; 
+    border: none; 
+    border-radius: 10px; 
+    padding: 12px 32px; 
+    cursor: pointer; 
+    margin-top: 12px; 
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.reserva-btn:hover {
+    color: white; 
+    font-weight: 500;
+    background: linear-gradient(45deg, #38587C, #111B26); 
+}
+
+.galeria-item a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05); 
+    opacity: 1; 
+}
+
+.galeria-item:hover .reserva-btn {
+    background: linear-gradient(45deg, #38587C, #111B26); 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* ---------------- Servicio 4: Vuelos ---------------- */
+
+.container-vuelos {
+    display: flex; 
+    align-items: flex-start; 
+    max-width: 1200px;
+    margin: auto; 
+}
+
+.acordeon-image {
+    margin-right: 20px; 
+}
+
+.acordeon-image img {
+    max-width: 406px;
+    height: auto; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s; 
+}
+
+.acordeon-image img:hover {
+    transform: scale(1.05); 
+}
+
+.acordeon-contain {
+    flex: 1; 
+}
+
+.acordeon * { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.acordeon details {
+    margin-bottom: 10px;
+    list-style-type: none; 
+    display: block; 
+}
+
+summary {
+    background: #293E55;
+    color: white;
+    height: 70px; 
+    line-height: 70px; 
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin-left: 80px;
+}
+
+summary:hover {
+    background: #213143;
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+summary:hover .azul {
+    color: #213143;
+}
+
+.azul {
+    color: #293E55; 
+}
+
+.acordeon p {
+    padding: 10px;
+    background: white;
+    color: rgb(61, 61, 61);
+    font-family: 'Poppins', sans-serif;
+}
+
+.vuelo-container {
+    display: flex; 
+    align-items: center; 
+}
+
+.origin {
+    text-align: center; 
+    padding-top: 0px; 
+    margin-top: 0px;
+    margin-bottom: -15px; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px; 
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px; 
+}
+
+.origin {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 17px; 
+    font-weight: bold;
+    margin-left: 15px; 
+}
+
+.precio-contenedor {
+    margin-left: 400px; 
+}
+
+.precio-vuelo {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+.vuelo-containerB {
+    display: flex;
+    align-items: center;
+    transform: translateY(-22px); 
+}
+
+.destination {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 40px; 
+    font-weight: bold;
+    margin-left: 15px; 
+}
+
+.precio-iconA {
+    margin-left: 316px; 
+}
+
+.precio-iconB {
+    margin-left: 366px; 
+}
+
+.precio-iconC {
+    margin-left: 421px; 
+}
+
+.mxn-text {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px; 
+    font-weight: bold; 
+    color: #293E55; 
+}
+
+.linea-divisor {
+    height: 2px; 
+    background-color: #000; 
+    margin-top: 20px; 
+    margin-bottom: 5px;
+    transform: translateY(-25px); 
+}
+
+.link-vuelo {
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center;
+    padding: 10px; 
+    background-color: transparent; 
+    transition: background-color 0.3s ease;
+}
+
+.text-vuelo {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #293E55;
+    letter-spacing: 6px;
+    transform: translateY(-20px); 
+}
+
+.text-vuelo i {
+    margin-left: 5px; 
+}
+
+.text-vuelo:hover {
+    text-decoration: none; 
+    color:#5680AE;
+}
+
+.c {
+    color: #FFF;
+}
+
+/* ---------- Servicio 5: Catálogo de carros ---------- */
+
+.catalogo-carros{
+    width: 100%;
+    height: 100%;
+    background-color: #080B0E; 
+}
+
+.title-containerB {
+    display: flex; 
+    align-items: center; 
+    padding-top: 50px;
+    padding-left: 60px;
+}
+
+.titleB {
+    font-family: 'Poppins', sans-serif; 
+    color: #FFF;
+    font-size: 22px;
+    letter-spacing: 3px; 
+    margin: 0;
+}
+
+.decorative-boxB {
+    width: 10px; 
+    height: 18px; 
+    background-color: #FFF; 
+    margin-right: 15px;
+}
+
+.galeria-3d * {
+    box-sizing: border-box;
+}
+
+.galeria-3d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    height: 70vh; 
+    position: relative;
+    top: -40px;  
+    left: -40px; 
+}
+
+.galeria-3d body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.galeria-3d main {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 100px;
+    width: 100%; 
+    max-width: 1030px; 
+}
+
+.data-display {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: rgba(95, 97, 98, 0.6);
+    width: 300px;
+    height: 255px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    left: -200px; 
+}
+
+#car-title {
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #e7e6e6; 
+    letter-spacing: 1px; 
+    margin-bottom: 10px; 
+}
+
+#car-info {
+    font-size: 17px; 
+    font-weight: normal; 
+    color: #FFF; 
+    line-height: 1.5; 
+    margin-top: 10px; 
+}
+
+#reserve-button {
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    background-color: #314A65; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-family: 'Poppins', sans-serif;
+}
+
+#reserve-button:hover {
+    background-color: #223346; 
+}
+
+.box {
+    position: relative;
+    width: 180px; 
+    height: 200px; 
+    transform-style: preserve-3d;
+    transition: 1.5s;
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 200px; 
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(300px); 
+}
+
+.box span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    transition: transform 0.3s ease; 
+}
+
+.box span img:hover {
+    transform: scale(1.1);
+}
+
+.btns {
+    position: absolute;
+    bottom: -15px;          
+    left: 68%;            
+    transform: translateX(-60%) translateY(0);  
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns .btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btns .btn:active {
+    background-color: #FFF;
+}
+
+.btns .btn::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid #FFF;
+    transform: rotate(45deg) translate(-2.5px, 2.5px);
+}
+
+.btns .btn.rotate-prev::before {
+    transform: rotate(225deg) translate(-2.5px, 2.5px);
+}
+
+.btns .btn:active::before {
+    border-top: 4px solid #314A65;
+    border-right: 4px solid #314A65;
+}
+
+.btns .btn:hover {
+    background-color: #314A65;  
+    border-color: #314A65;     
+}
+
+.btns .btn:hover::before {
+    border-top: 3px solid #FFF;  
+    border-right: 3px solid #FFF; 
+}
+
+.separador {
+    background-color: #080B0E;
+}
+
+/* ---------------------------------------------------- */
+/* ------------------- F o o t e r -------------------- */
+/* ---------------------------------------------------- */
+
+footer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: #111821; 
+    color: #FFF; 
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo img {
+    max-height: 57px; 
+    margin-left: 50px;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 26px;
+    margin-left: auto; 
+    margin-right: 70px; 
+}
+
+.social-media ul {
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.social-media li {
+    margin-left: 80px; 
+}
+
+.social-media img {
+    max-height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.3);
+}
+
+.footer-menu {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 18px; 
+    width: 100%;
+}
+
+.footer-menu ul {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    margin: 0; 
+    gap: 50px;
+}
+
+.footer-menu li {
+    text-align: center;
+}
+
+.footer-menu li:not(:last-child) {
+    border-right: 2px solid white; 
+    padding-right: 50px; 
+}
+
+.footer-menu a {
+    color: white; 
+    text-decoration: none; 
+    display: block; 
+    font-size: 13px;
+}
+
+.footer-menu span {
+    display: block; 
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}

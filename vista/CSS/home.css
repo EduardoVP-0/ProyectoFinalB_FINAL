@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    text-align: center;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------------------- */
+/* ------------------- H e a d e r -------------------- */
+/* ---------------------------------------------------- */
+
+.header {
+    position: relative;
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    max-height: 500px;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: none; 
+}
+
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    background-color: transparent; 
+    transition: background-color 0.3s;
+    height: 115px;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: #111821;
+    height: 115px;
+}
+
+.navbar a {
+    padding: 14px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 3px; 
+    font-weight: bold;
+    position: relative; 
+}
+
+.logo {
+    width: auto; 
+    height: 50px;
+    margin: 0 10px;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; 
+    background-color: white; 
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar a.nav-logo::after {
+    display: none;
+}
+
+.reserva-button {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #314A65;
+    padding: 12px 15px;
+    z-index: 1; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.inner-button {
+    background-color: #314A65; 
+    color: white; 
+    padding: 12px 30px; 
+    border: 3px solid white;
+    text-decoration:none;
+}
+
+.reserva-button:hover {
+    background-color: rgba(41, 62, 85, 0.9);
+}
+
+.reserva-button:hover .inner-button {
+    background-color: rgba(41, 62, 85, 0.9);
+    color: white; 
+}
+
+.modalA {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 400px;
+    background-color: #ebe9e9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.mainu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: calc(100% - 40px); 
+}
+
+.mainu-item {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+.mainu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+header h2 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #28425E;
+    font-size: 26px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.mainu-item:hover img {
+    transform: scale(1.1);
+}
+
+.mainu-item:not(:last-child) {
+    margin-right: -50px;
+}
+
+.modalA .close-btnA {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 40px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modalA .close-btnA:hover {
+    transform: scale(1.1);
+}
+
+.access-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: white; 
+    border: 3px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    position: absolute;
+    left: 60px; 
+    bottom: 50px;
+}
+
+.access-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ---------------------------------------------------- */
+/* --------------------- M a i n ---------------------- */
+/* ---------------------------------------------------- */
+
+/* ------- ¿Por qué reservar en Chiapas Viajero? ------ */
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px 0 20px; 
+    padding-left: 35px;  
+    padding-right: 55px;
+}
+
+.image-item{
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-item img {
+    width: 40%; 
+    height: auto; 
+}
+
+.title{
+    font-family: 'Poppins', sans-serif;
+    color:#1A2432;
+    font-size: 24px;
+    letter-spacing: 3px; 
+    text-align: center;
+    margin: 15px 0;
+}
+
+.subtitle{
+    font-family: 'Poppins', sans-serif;
+    color:#314A65;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ---------------- Carrusel (banners) ---------------- */
+
+.carrusel-banners {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.img-banners {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.img-banners img {
+    max-width: 100%;
+    display: block;
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.bola {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #BBB;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.bola.activa {
+    background-color: #717171;
+}
+
+/* ---------------------- Frase ----------------------- */
+
+.frase {
+    background-color: #F3F3F2; 
+    padding: 40px; 
+    text-align: center; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #000; 
+}
+
+.frase-text{
+    margin-left: 260px;
+    margin-right: 260px;
+}
+
+.resaltador-text{
+    color: #314A65;
+}
+
+/* --------------- Carrusel (destinos) ---------------- */
+
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    max-width: 1200px; 
+    padding: 0 50px;
+    margin: 0 auto; 
+}
+
+.carrusel {
+    width: 100%; 
+    max-width: 1200px;
+    overflow: hidden; 
+    margin: 0 auto;
+}
+
+.imagen {
+    display: flex;
+    transition: transform 0.5s ease; 
+    gap: 18px;
+    padding: 0px 20px;
+}
+
+.img {
+    min-width: 32.677%;
+    height: 435px; 
+}
+
+.img img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease; 
+}
+
+.img:hover img {
+    opacity: 0.9; 
+}
+
+.prev{
+    width: 70px;
+    height: 70px; 
+    background-image: url('./vista/IMG/home/IzquierdaAzul.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    border: none; 
+    background-color: transparent; 
+    margin-right: 20px;
+}
+
+.next{
+    width: 50px;
+    height: 53px; 
+    background-image: url('./vista/IMG/home/DerechaAzul.png');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    border: none;
+    background-color: transparent; 
+    margin-left: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #F9F9F9;
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1000px; 
+    height: 415px; 
+    overflow-y: auto; 
+    box-sizing: border-box;
+    position: absolute;
+    top: 70%; 
+    left: 50%; 
+    transform: translate(-50%, -65%); 
+    font-family: 'Poppins', sans-serif; 
+    text-align: justify; 
+}
+
+.close {
+    color: #AAA;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 18px; 
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.nombre-imagen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+  
+.imagen-container:hover .nombre-imagen {
+    opacity: 1;
+    visibility: visible; 
+    transition: opacity 0.3s ease, visibility 0s 0s; 
+}
+
+#modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#modal-description {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;  
+    justify-content: center;
+    text-justify: inter-word;
+}
+
+#modal-image-container img {
+    width: 100%; 
+    max-height: 300px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#modal-additional-images {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center; 
+    width: 100%;
+}
+
+#modal-additional-images img {
+    width: 30%; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#modal-additional-images {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center; 
+    width: 100%;
+}
+
+#modal-additional-images .imagen-container {
+    position: relative;
+    width: 30%;
+    height: 200px; 
+}
+
+#modal-additional-images .imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease; 
+}
+
+#modal-additional-images .imagen-container .nombre-imagen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden; 
+    transition: transform 0.5s ease, opacity 0.3s ease, visibility 0s 0.5s; 
+}
+
+#modal-additional-images .imagen-container:hover .nombre-imagen {
+    transform: translateY(0); 
+    opacity: 1;
+    visibility: visible; 
+    transition: transform 0.5s ease, opacity 0.3s ease, visibility 0s 0s;
+}
+
+/* ----------------------- Mapa ----------------------- */
+
+.map {
+    background-color: #F3F3F2; 
+    padding: 60px 150px; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin: 0 auto; 
+}
+
+.map-header {
+    display: flex;
+    align-items: center; 
+}
+
+.map img {
+    width: 10px; 
+    height: 18px;
+    margin-right: 10px; 
+}
+
+.map-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; 
+    font-size: 24px; 
+    margin: 0;
+}
+
+.map-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    text-align: center; 
+    padding: 0 20px;
+    width: 100%;
+    max-width: 790px; 
+    margin: 0 auto; 
+}
+
+.map-image {
+    display: block; 
+    max-width: 55%; 
+    height: auto; 
+    margin: 20px auto;
+}
+
+.linea-divisora {
+    height: 12px; 
+    background-color: #37516D;
+    margin: 20px 0; 
+    border: none; 
+}
+
+/* --------------- Preguntas Frecuentes ---------------- */
+
+.container-questions {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.questions {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.columna {
+    width: 48%;
+}
+
+.question {
+    margin-bottom: 12px;
+}
+
+.container-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    display: none;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+}
+
+.question_title{
+    text-align: left;
+    display: flex;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+    border: none;
+    width: 100%;
+    margin: 0; 
+    padding: 8px 0; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.question_arrow{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    transition:  transform .2s;
+}
+
+.question_arrow--rotate{
+    transform: rotate(180deg);
+}
+
+.question_img{
+    width: 30px;
+    height: 20px;
+}
+
+/* ---------------------------------------------------- */
+/* ------------------- F o o t e r -------------------- */
+/* ---------------------------------------------------- */
+
+footer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: #111821; 
+    color: #FFF; 
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo img {
+    max-height: 57px; 
+    margin-left: 50px;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 26px;
+    margin-left: auto; 
+    margin-right: 70px; 
+}
+
+.social-media ul {
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.social-media li {
+    margin-left: 80px; 
+}
+
+.social-media img {
+    max-height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.3);
+}
+
+.footer-menu {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 18px; 
+    width: 100%;
+}
+
+.footer-menu ul {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    margin: 0; 
+    gap: 50px;
+}
+
+.footer-menu li {
+    text-align: center;
+}
+
+.footer-menu li:not(:last-child) {
+    border-right: 2px solid white; 
+    padding-right: 50px; 
+}
+
+.footer-menu a {
+    color: white; 
+    text-decoration: none; 
+    display: block; 
+    font-size: 13px;
+}
+
+.footer-menu span {
+    display: block; 
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
