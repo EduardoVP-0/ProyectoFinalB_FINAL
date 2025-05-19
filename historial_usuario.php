@@ -119,7 +119,7 @@
                                     <td class="text-center"><?= $datos->lugar_salida ?></td>
                                     <td class="text-center"><?= $datos->fecha_salida ?></td>
                                     <td class="text-center"><?= $datos->hora_salida ?></td>
-                                    <td class="text-center"><?= "$" . number_format($datos->precio_excursion, 2) ?></td>
+                                    <td class="text-center"><?= "$" . number_format($datos->precio_paquete, 2) ?></td>
                                     <td class="text-center"><?= $datos->estado_reserva ?></td>
                                 </tr>
                             <?php } ?>
