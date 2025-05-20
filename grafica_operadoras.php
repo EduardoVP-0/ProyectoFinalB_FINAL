@@ -117,7 +117,7 @@ $total_ingresos = number_format($result_ingresos->fetch_assoc()['total_ingresos'
 
     .info-item {
       background: #F9FAFB;
-      border-left: 5px solid #4F46E5;
+      border-left: 5px solid #111821;
       padding: 18px 25px;
       font-weight: 600;
       font-size: 1.2rem;

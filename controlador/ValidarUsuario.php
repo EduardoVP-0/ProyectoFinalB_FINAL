@@ -30,10 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $row = $result->fetch_assoc();
     $_SESSION['usuario'] = $row['usuario'];
     $_SESSION['id_agente'] = $row['id_agente']; // Guardar id_agente en sesión
-    header("Location: ../ServicioA.php");
+    header("Location: ../Home.php");
     exit();
     } else {
-        header("Location: ../inicio.php?error=1");
+        header("Location: ../Home.php?error=1");
         exit();
     }
 } else {
